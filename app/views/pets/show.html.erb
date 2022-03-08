@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%= @pet.species.upcase %></h1>
+  <p>Found on: <%= @pet.date_found %></p>
+  <p>Address: <%= @pet.address %></p>
+
+  <p><%= link_to 'Back to lost pets', pets_path, class: 'btn btn-primary' %></p>
+  <p><%= link_to 'Edit', edit_pet_path(@pet), class: 'btn btn-outline-primary' %></p>
+  <p><%= link_to 'Delete', pet_path(@pet), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-primary' %></p>
+</div>
+
